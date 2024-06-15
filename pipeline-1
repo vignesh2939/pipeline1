@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        /* "build" and "test" stages omitted */
+        stage('deploy - dev') {
+            steps {
+                echo 'deploy'
+            }
+        }
+        stage('deploy - QA') {
+            steps {
+                echo 'QA'
+            }
+        }
+        stage('deploy - production') {
+            steps {
+                echo 'production'
+            }
+        }
+    }
+}
